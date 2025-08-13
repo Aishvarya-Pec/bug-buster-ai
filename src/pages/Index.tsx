@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/Header";
 import { SampleAnalysisDrawer } from "@/components/SampleAnalysisDrawer";
 import { Code, Zap, Shield, Clock, ArrowRight, CheckCircle, Star, Github, FileText, Bug } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-illustration.jpg";
 
 const Index = () => {
@@ -96,9 +97,11 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="premium" size="xl" className="group">
-                  Get Started Free
-                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button asChild variant="premium" size="xl" className="group">
+                  <Link to="/auth">
+                    Get Started Free
+                    <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
                 <Button 
                   variant="outline" 
@@ -259,8 +262,8 @@ const Index = () => {
               Join thousands of developers using AI Bug Fixer to catch bugs early and ship cleaner code.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="xl" className="bg-white text-primary hover:bg-white/90">
-                Start Free Analysis
+              <Button asChild variant="secondary" size="xl" className="bg-white text-primary hover:bg-white/90">
+                <Link to="/auth">Start Free Analysis</Link>
               </Button>
               <Button 
                 variant="outline" 
